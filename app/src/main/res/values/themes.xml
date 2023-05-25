@@ -6,4 +6,13 @@
     </style>
 
     <style name="Theme.AppMegatecs" parent="Base.Theme.AppMegatecs" />
+
+    <style name="Theme.AppMegatecs.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.AppMegatecs.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.AppMegatecs.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

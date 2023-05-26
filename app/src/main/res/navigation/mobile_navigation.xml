@@ -10,5 +10,25 @@
         android:name="com.example.appmegatecs.ui.home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/nav_products"
+        android:name="com.example.appmegatecs.ui.products.nav_products"
+        android:label="@string/menu_products"
+        tools:layout="@layout/fragment_nav_products" />
+    <fragment
+        android:id="@+id/nav_categorys"
+        android:name="com.example.appmegatecs.ui.categorys.nav_categorys"
+        android:label="@string/menu_category"
+        tools:layout="@layout/fragment_nav_categorys" />
+    <fragment
+        android:id="@+id/nav_shoppingCart"
+        android:name="com.example.appmegatecs.ui.shoppingCart.nav_shoppingCart"
+        android:label="@string/menu_shoppingCart"
+        tools:layout="@layout/fragment_nav_shopping_cart" />
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.example.appmegatecs.ui.profile.nav_profile"
+        android:label="@string/menu_profile"
+        tools:layout="@layout/fragment_nav_profile" />
 
 </navigation>

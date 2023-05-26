@@ -13,4 +13,15 @@
     <string name="menu_products">Productos</string>
     <string name="menu_shoppingCart">Carrito de compras</string>
     <string name="menu_profile">Perfil</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!--Categorias-->
+    <string name="category_screen">Pantallas</string>
+    <string name="category_computer">Computadoras</string>
+    <string name="category_laptop">Laptops</string>
+    <string name="category_print">Impresoras</string>
+    <string name="category_component">Componentes</string>
+    <string name="category_camera">Cámaras de seguridad</string>
+
+
 </resources>

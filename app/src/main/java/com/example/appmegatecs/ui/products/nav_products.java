@@ -2,13 +2,18 @@ package com.example.appmegatecs.ui.products;
 
 import android.os.Bundle;
 
+import androidx.constraintlayout.helper.widget.Carousel;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.appmegatecs.R;
+import com.google.android.material.carousel.CarouselLayoutManager;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -58,8 +63,19 @@ public class nav_products extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View rootView = inflater.inflate(R.layout.fragment_nav_products, container, false);
+        ArrayList<ImageProducts> images = new ArrayList<>();
+        images.add(new ImageProducts("image 1", "https://www.profesionalreview.com/wp-content/uploads/2019/08/AORUS-CV27F-Gaming-Monitor.jpg"));
+        images.add(new ImageProducts("image 2", "https://www.profesionalreview.com/wp-content/uploads/2019/08/AORUS-CV27F-Gaming-Monitor.jpg"));
+        images.add(new ImageProducts("image 3", "https://www.profesionalreview.com/wp-content/uploads/2019/08/AORUS-CV27F-Gaming-Monitor.jpg"));
+        images.add(new ImageProducts("image 4", "https://www.profesionalreview.com/wp-content/uploads/2019/08/AORUS-CV27F-Gaming-Monitor.jpg"));
+        images.add(new ImageProducts("image 5", "https://www.profesionalreview.com/wp-content/uploads/2019/08/AORUS-CV27F-Gaming-Monitor.jpg"));
+        CustomAdapter customAdapter = new CustomAdapter(images);
+
+        RecyclerView carouselRecyclerView = rootView.findViewById(R.id.recyclerImgProducts);
+        carouselRecyclerView.setLayoutManager(new CarouselLayoutManager());
+        carouselRecyclerView.setAdapter(customAdapter);
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_nav_products, container, false);
     }

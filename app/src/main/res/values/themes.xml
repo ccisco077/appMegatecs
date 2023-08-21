@@ -38,4 +38,5 @@
 
     <style name="Theme.AppMegatecs.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
     <style name="Theme.AppMegatecs.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
 </resources>

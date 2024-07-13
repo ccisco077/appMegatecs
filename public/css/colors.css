@@ -1,0 +1,13 @@
+:root {
+	--bs-bg-opacity: 1;
+	--bg-custom-black-rgb: 49, 49, 49;
+	--bg-custom-black: #313131;
+}
+.text-bg-custom-black {
+	color: #fff !important;
+	background-color: RGBA(var(--bg-custom-black-rgb), var(--bs-bg-opacity, 1)) !important;
+}
+.bg-custom-black {
+	--bs-bg-opacity: 1;
+	background-color: rgba(var(--bg-custom-black-rgb), var(--bs-bg-opacity)) !important;
+}

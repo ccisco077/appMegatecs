@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+.Title-Head-1 {
+    font-family: "Red Hat Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-size: 35.5px;
+    font-style: normal;
+    color: var(--bg-custom-black);
+}
+
+@media (max-width: 768px){
+    .Title-Head-1 {
+        font-size: 25px;
+    }
+}
+@media (max-width: 576px) {
+    .Title-Head-1 {
+        font-size: 20px;
+    }
+}
+@media (max-width: 320px) {
+    .Title-Head-1 {
+        font-size: 15px;
+    }
+}
+
+.Text-Mulish {
+    font-family: "Mulish", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+}

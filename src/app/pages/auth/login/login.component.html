@@ -1,1 +1,35 @@
-<h1>hola mundo!</h1>
+<div class="container">
+    <div class="row py-5">
+        <div class="col-6 px-4 d-flex flex-column justify-content-center">
+            <div class="row">
+                <div class="Title-From-1">Inicio de sesión</div>
+                <div class="Sub-Title-From-1">Inicie sesión para acceder a su cuenta</div>
+            </div>
+            <form>
+                <div class="row">
+                    <div class="col-12 mb-3">
+                        <app-input-label-box label="Email" type="email" (onChange)="onChangeInputCustom('email', $event)" />
+                    </div>
+                    <div class="col-12 mb-3">
+                        <app-input-label-box label="Password" type="password" (onChange)="onChangeInputCustom('password', $event)" />
+                    </div>
+                    <div class="col-6 my-3">
+                        <label for="remember"><input class="form-check-input" type="checkbox" name="remember" id="remember"> Recordarme</label>
+                    </div>
+                    <div class="col-6 my-3 text-end">
+                        <a [routerLink]="'/auth/forgot-password'" class="Text-Custom-1 text-danger ">Olvide mi contraseña</a>
+                    </div>
+                    <div class="my-3 col-12">
+                        <button type="button" class="btn btn-primary w-100">Ingresar</button>
+                        <p class="Text-Custom-1 text-center mt-2">
+                            No tienes una cuenta? <a [routerLink]="'/auth/register'" class="text-danger">Regístrate</a>
+                        </p>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-6 px-4 d-flex align-items-center justify-content-center">
+            <img src="img/auth-carousel/image-1.svg" alt="image-login" class="img-fluid w-75">
+        </div>
+    </div>
+</div>

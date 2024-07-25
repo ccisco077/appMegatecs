@@ -1,0 +1,16 @@
+<div class="input-wrapper">
+    <label for="first">{{ label }}</label>
+    @switch (type) {
+        @case ("password") {
+            <input class="px-3 py-1 w-100" [type]="viewPassword ? 'text':'password'" (input)="onChangeValue($event)">
+            <button id="toggle-password" type="button"
+                (click)="viewPassword=!viewPassword"
+                aria-label="Show password as plain text. Warning: this will display your password on the screen.">
+                <i [class]="viewPassword ? 'bi bi-eye-fill':'bi bi-eye-slash-fill'"></i>
+            </button>
+        }
+        @default {
+            <input class="px-3 py-1 w-100" [type]="type" (input)="onChangeValue($event)">
+        }
+    }
+</div>

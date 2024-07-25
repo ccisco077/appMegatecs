@@ -1,0 +1,49 @@
+.input-wrapper {
+    position: relative;
+}
+  
+input {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+
+    border: 1px solid #79747E;
+    border-radius: 6px;
+    position: relative;
+    margin-top: 10px;
+    line-height: 4ex;
+}
+input:focus {
+    outline: none;
+    border: 1px solid #79747E;
+}
+  
+label {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal; 
+    font-size: 14px;
+
+    position: absolute;
+    top: 0.2ex;
+    z-index: 1;
+    left: 1em;
+    background-color: white;
+    padding: 0 5px;
+}
+
+#toggle-password {
+    position: absolute;
+    right: 0.5em;
+    top: 50%;
+    transform: translateY(-38%);
+    border: none;
+    background: none;
+    cursor: pointer;
+    z-index: 2;
+}
+
+#toggle-password i {
+    font-size: 1.2em;
+}

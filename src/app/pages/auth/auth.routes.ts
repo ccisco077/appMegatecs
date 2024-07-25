@@ -8,20 +8,19 @@ export const authRoutes: Routes = [
     {
         path: 'auth',
         component: AuthComponent,
-        pathMatch: 'full',
         children: [
-            // {
-            //     path: '',
-            //     redirectTo: 'login',
-            //     pathMatch: 'full'
-            // },
+            {
+                path: '',
+                redirectTo: 'login',
+                pathMatch: 'full'
+            },
             {
                 path: 'login',
                 component: LoginComponent
             },
             {
                 path: 'register',
-                component: RegisterComponent
+                component: RegisterComponent          
             },
             {
                 path: 'forgot-password',

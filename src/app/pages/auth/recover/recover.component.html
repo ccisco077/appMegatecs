@@ -1,1 +1,89 @@
-<p>recover works!</p>
+<div class="container">
+    <div class="row py-5">
+        @switch (view) {
+            <!-- recover -->
+            @case (0) {
+                <div class="col-5 px-4 d-flex flex-column justify-content-center">
+                    <div class="row">
+                        <a [routerLink]="'auth/login'" class="unstyled-link">
+                            <i class="bi bi-chevron-compact-left"></i> Regresar
+                        </a>
+                        <div class="Title-From-1 my-2">¿Olvidaste tu contraseña?</div>
+                        <div class="Sub-Title-From-1 my-2">No te preocupes, nos pasa a todos. Ingrese su correo electrónico a continuación para recuperar su contraseña.</div>
+                    </div>
+                    <form>
+                        <div class="row">
+                            <div class="col-12 my-md-1">
+                                <app-input-label-box label="Email" type="email" (onChange)="onChangeInputCustom('email', $event)" />
+                            </div>
+                            <div class="my-3 col-12">
+                                <button type="button" class="btn btn-primary w-100">Enviar código</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-7 px-4 d-flex align-items-center justify-content-center">
+                    <img src="img/auth-carousel/image-3.svg" alt="image-login" class="img-fluid w-75">
+                </div>
+            }
+            <!-- verify -->
+            @case (1) {
+                <div class="col-5 px-4 d-flex flex-column justify-content-center">
+                    <div class="row">
+                        <a [routerLink]="'auth/login'" class="unstyled-link">
+                            <i class="bi bi-chevron-compact-left"></i> Regresar
+                        </a>
+                        <div class="Title-From-1 my-2">Verificar código</div>
+                        <div class="Sub-Title-From-1 my-2">Se ha enviado un código de autenticación a su correo electrónico.</div>
+                    </div>
+                    <form>
+                        <div class="row">
+                            <div class="col-12 my-md-1">
+                                <app-input-label-box label="Ingresar código" type="password" (onChange)="onChangeInputCustom('code', $event)" />
+                            </div>
+                            <div class="col-12">
+                                <p class="Title-From-2 text-color-custom-black">
+                                    ¿No recibiste un código? <span class="text-danger">Reenviar</span>
+                                </p>
+                            </div>
+                            <div class="my-3 col-12">
+                                <button type="button" class="btn btn-primary w-100">Verificar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-7 px-4 d-flex align-items-center justify-content-center">
+                    <img src="img/auth-carousel/image-1.svg" alt="image-login" class="img-fluid w-75">
+                </div>
+            }
+            <!-- change-password -->
+            @case (2) {
+                <div class="col-5 px-4 d-flex flex-column justify-content-center">
+                    <div class="row">
+                        <a [routerLink]="'auth/login'" class="unstyled-link">
+                            <i class="bi bi-chevron-compact-left"></i> Regresar
+                        </a>
+                        <div class="Title-From-1 my-2">Establecer contraseña</div>
+                        <div class="Sub-Title-From-1 my-2">Su contraseña anterior ha sido restablecida. Establezca una nueva contraseña para su cuenta.</div>
+                    </div>
+                    <form>
+                        <div class="row">
+                            <div class="col-12 my-md-1">
+                                <app-input-label-box label="Crear contraseña" type="password" (onChange)="onChangeInputCustom('email', $event)" />
+                            </div>
+                            <div class="col-12 my-md-1">
+                                <app-input-label-box label="Confirmar tu contraseña" type="password" (onChange)="onChangeInputCustom('email', $event)" />
+                            </div>
+                            <div class="my-3 col-12">
+                                <button type="button" class="btn btn-primary w-100">Confirmar contraseña</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-7 px-4 d-flex align-items-center justify-content-center">
+                    <img src="img/auth-carousel/image-3.svg" alt="image-login" class="img-fluid w-75">
+                </div>
+            }
+        }
+    </div>
+</div>

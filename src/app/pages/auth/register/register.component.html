@@ -1,1 +1,48 @@
-<p>register works!</p>
+<div class="container">
+    <div class="row py-5">
+        <div class="col-6 px-4 d-flex align-items-center justify-content-center">
+            <img src="img/auth-carousel/image-2.svg" alt="image-login" class="img-fluid w-75">
+        </div>
+        <div class="col-6 px-4 d-flex flex-column justify-content-center">
+            <div class="row">
+                <div class="Title-From-1 my-2">Registrarse</div>
+                <div class="Sub-Title-From-1 my-2">Esta cuenta te permitirá ingresar y administrar todas las tiendas que crees
+                    para tu emprendimiento.</div>
+            </div>
+            <form>
+                <div class="row">
+                    <div class="col-6 my-md-1">
+                        <app-input-label-box label="Nombre" type="text" (onChange)="onChangeInputCustom('name', $event)" />
+                    </div>
+                    <div class="col-6 my-md-1">
+                        <app-input-label-box label="Apellido" type="text" (onChange)="onChangeInputCustom('fullname', $event)" />
+                    </div>
+                    <div class="col-6 my-md-1">
+                        <app-input-label-box label="Email" type="email" (onChange)="onChangeInputCustom('email', $event)" />
+                    </div>
+                    <div class="col-6 my-md-1">
+                        <app-input-label-box label="Número de teléfono" type="number" (onChange)="onChangeInputCustom('phone', $event)" />
+                    </div>
+                    <div class="col-12 my-md-1">
+                        <app-input-label-box label="Contraseña" type="password" (onChange)="onChangeInputCustom('password', $event)" />
+                    </div>
+                    <div class="col-12 my-md-1">
+                        <app-input-label-box label="Confirma tu contraseña" type="password" (onChange)="onChangeInputCustom('password', $event)" />
+                    </div>
+                    <div class="col-12 my-5">
+                        <p class="Title-From-2 text-color-custom-black">
+                            <span class="text-danger ">IMPORTANTE:</span> El número de celular debe tener WhatsApp activo y el correo electrónico
+                            debe ser válido (se usarán en caso de pérdida de contraseña).
+                        </p>
+                    </div>
+                    <div class="my-3 col-12">
+                        <button type="button" class="btn btn-primary w-100">Registrar</button>
+                        <p class="Text-Custom-1 text-center mt-2">
+                            ¿Ya tienes una cuenta? <a [routerLink]="'/auth/login'" class="text-danger">Ingresa sesión aquí</a>
+                        </p>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

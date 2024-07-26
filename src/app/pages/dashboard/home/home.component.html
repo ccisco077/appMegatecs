@@ -1,5 +1,32 @@
 <div class="row">
-    <div class="col">
-        <app-card-stats />
+    <div class="col-3">
+        <app-card-stats 
+            [Title]="'Nuevos Clientes'"
+            [Details]="'Up from yesterday'"
+            [Value]="'45000'"
+            [Icon]="'bi bi-people-fill'"
+            [Percentage]="'5%'"
+        />
+    </div>
+    <div class="col-3">
+        <app-card-stats 
+            [Title]="'Pedidos Pendientes'"
+            [Details]="'Up from past week'"
+            [Value]="'10293'"
+            [Icon]="'bi bi-box-fill'"
+            [Percentage]="'1.3%'"
+            [Color]="'#FEC53D'"
+        />
+    </div>
+    <div class="col-3">
+        <app-card-stats 
+            [Title]="'Total de Ventas'"
+            [Details]="'Down from yesterday'"
+            [Value]="'$89,000'"
+            [Icon]="'bi bi-box-fill'"
+            [Percentage]="'4.3%'"
+            [Color]="'#4AD991'"
+            [Positive]="false"
+        />
     </div>
 </div>

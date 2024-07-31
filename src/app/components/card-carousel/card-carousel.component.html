@@ -1,0 +1,29 @@
+<div class="card">
+  <div class="card-body">
+    <div class="card-title Title-Card-Carousel">
+      {{ Title }}
+    </div>
+    <div class="card-text d-flex justify-content-center align-items-center p-3">
+      <ngb-carousel #carousel [showNavigationArrows]="false" [showNavigationIndicators]="false">
+        @for (img of Images; track $index) {
+          <ng-template ngbSlide>
+            <div class="picsum-img-wrapper">
+              <img [src]="img.src" [alt]="img.name" class="img-fluid">
+            </div>
+            <div class="text-center card-text Text-Card-Carousel">
+              <p class="my-4">{{ img.name }}</p>
+              <p class="text-primary my-4">{{ img.description }}</p>
+            </div>
+          </ng-template>
+        }
+        <!-- Add more ng-template ngbSlide elements as needed -->
+      </ngb-carousel>
+      <button class="align-self-center carousel-control-prev rounded-circle mx-2" (click)="carousel.prev()">
+        <i class="bi bi-chevron-left"></i>
+      </button>
+      <button class="align-self-center carousel-control-next rounded-circle mx-2" (click)="carousel.next()">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </div>
+</div>

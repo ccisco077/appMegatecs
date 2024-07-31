@@ -23,10 +23,29 @@
             [Title]="'Total de Ventas'"
             [Details]="'Down from yesterday'"
             [Value]="'$89,000'"
-            [Icon]="'bi bi-box-fill'"
+            [Icon]="'bi bi-graph-up'"
             [Percentage]="'4.3%'"
             [Color]="'#4AD991'"
             [Positive]="false"
         />
+    </div>
+</div>
+<div class="row">
+    <div class="col-4">
+        <app-card-carousel [Images]="imgProducts" [Title]="'Productos Destacados'" />
+    </div>
+    <div class="col-4">
+        <app-dashboard-card-frequent-client />
+    </div>
+    <div class="col-4">
+        <app-card-analysis [Title]="'Análisis de Venta'" [Name]="'Ventas'" [Data]="{
+            DataX: ['01/02', '02/02', '03/02', '04/02', '05/02', '06/02', '07/02'],
+            DataY: [31, 40, 28, 51, 42, 109, 100]
+        }" />
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <!-- <app-table /> -->
     </div>
 </div>

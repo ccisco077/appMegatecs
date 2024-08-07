@@ -1,5 +1,5 @@
 <div class="card rounded rounded-4">
-    <div class="card-header Title-Card-Carousel rounded rounded-top-4">
+    <div class="card-header Title-Card-Carousel rounded-top-4 py-3">
         Empresa: {{ Title }}
     </div>
     <div class="card-body">
@@ -15,14 +15,14 @@
                 <li><i class="bi bi-share-fill"></i> Compartir tienda</li>
             </ul>
         </div>
-        <div class="row text-center">
+        <div class="row text-center fs-6">
             <div class="col-12 ">
-                <span class="badge my-2" [class]="{'bg-secondary': !Status, 'bg-success': Status}">
+                <span class="badge my-2 p-1 rounded-pill" [class]="{'bg-secondary': !Status, 'bg-success': Status}">
                     <i class="bi bi-circle-fill"></i> {{ Status ? 'Activo' : 'Inactivo' }}
                 </span>
             </div>
             <div class="col-12">
-                <button class="btn btn-primary py-1">Ir a la tienda</button>
+                <button class="btn btn-custom-primary rounded-4 py-1">Ir a la tienda</button>
             </div>
         </div>
     </div>

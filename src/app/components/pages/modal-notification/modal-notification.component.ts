@@ -1,5 +1,5 @@
-import { Component, ViewChild, inject } from '@angular/core';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { Component, Inject, Input, TemplateRef, ViewChild } from '@angular/core';
+import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-dashboard-modal-notification',
@@ -9,10 +9,8 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
   styleUrl: './modal-notification.component.css'
 })
 export class ModalNotificationComponent {
-  private modalService = inject(NgbModal);
+  @Input() Title!: string;
+  @Input() Description!: string;
+  @Input() Modal: any;
 
-  @ViewChild('modal', { static: true }) modal: any;
-  openModal() {
-    this.modalService.open(this.modal, { centered: true });
-  }
 }

@@ -76,3 +76,18 @@
     line-height: 20px;
     color: var(--bg-custom-black)
 }
+
+.Title-Card-Notifaction {
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 46px;
+    color: var(--bg-custom-black)
+}
+.Description-Card-Notifaction {
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 30px;
+    color: var(--bg-custom-black)
+}

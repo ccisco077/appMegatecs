@@ -1,5 +1,6 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, inject } from '@angular/core';
 import { ModalNotificationComponent } from "../pages/modal-notification/modal-notification.component";
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-card-add',
@@ -9,10 +10,13 @@ import { ModalNotificationComponent } from "../pages/modal-notification/modal-no
   styleUrl: './card-add.component.css'
 })
 export class CardAddComponent {
-
-  @ViewChild('modalComponent', { static: true }) modal!: ModalNotificationComponent;
+  private modalService = inject(NgbModal);
+  @ViewChild('content') content: any;
 
   openModal() {
-    this.modal?.openModal();
+    this.modalService.open(this.content, {
+      centered: true,
+      size: 'md'
+    });
   }
 }

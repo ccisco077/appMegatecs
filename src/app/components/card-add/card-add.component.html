@@ -1,3 +1,7 @@
+<ng-template #content let-modal>
+    <app-dashboard-modal-notification [Title]="'Hola mundo'" [Description]="'Gola mundo'" [Modal]="content" />
+</ng-template>
+
 <div class="card rounded rounded-4 mouse-pointer" (click)="openModal()">
     <div class="card-body">
         <div class="d-flex align-items-center flex-column p-5 my-5 fs-1">
@@ -8,4 +12,3 @@
         </div>
     </div>
 </div>
-<app-dashboard-modal-notification #modalComponent/>

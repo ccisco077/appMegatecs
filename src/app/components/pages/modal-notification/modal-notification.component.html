@@ -1,15 +1,15 @@
-<div class="modal-body text-center">
-	{{ Title }}
-	{{ Description }}
-</div>	
-	<!-- <div class="modal-header border border-0">
-	<button type="button" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"
-		(click)="Modal.dismiss('Cross click')"></button>
-</div>
-<div class="modal-body text-center">
-	<img src="img/card-notification/crown.svg" alt="crown-image" class="img-fluid my-2 w-25">
-	<div class="Title-Card-Notifaction">
+<ng-template #modal let-modal>
+	<div class="modal-header border border-0">
+		<button type="button" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"
+			(click)="modal.dismiss('Cross click')"></button>
 	</div>
-	<div class="Description-Card-Notifaction">
+	<div class="modal-body text-center">
+		<img src="img/card-notification/crown.svg" alt="crown-image" class="img-fluid my-2 w-25">
+		<div class="Title-Card-Notifaction">
+			{{ Title() }}
+		</div>
+		<div class="Description-Card-Notifaction">
+			{{ Description() }}
+		</div>
 	</div>
-</div> -->
+</ng-template>

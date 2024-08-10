@@ -32,14 +32,12 @@
               "src/styles.css"
             ],
             "scripts": [
-              "node_modules/apexcharts/dist/apexcharts.min.js",
               "public/template-dashboard/js/bootstrap.bundle.min.js",
+              "node_modules/apexcharts/dist/apexcharts.min.js",
               "public/template-dashboard/js/jquery.min.js",
               "public/template-dashboard/plugins/simplebar/js/simplebar.min.js",
               "public/template-dashboard/plugins/metismenu/js/metisMenu.min.js",
               "public/template-dashboard/plugins/perfect-scrollbar/js/perfect-scrollbar.js",
-              "public/template-dashboard/plugins/vectormap/jquery-jvectormap-2.0.2.min.js",
-              "public/template-dashboard/plugins/vectormap/jquery-jvectormap-world-mill-en.js",
               "public/template-dashboard/js/pace.min.js",
               "public/template-dashboard/js/app.js",
               "public/template-dashboard/js/index3.js"

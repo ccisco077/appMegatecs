@@ -1,6 +1,5 @@
-import { Component, Inject, Input, TemplateRef, ViewChild } from '@angular/core';
-import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
-
+import { Component, ElementRef, TemplateRef, ViewChild, inject, input } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-dashboard-modal-notification',
   standalone: true,
@@ -9,8 +8,13 @@ import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
   styleUrl: './modal-notification.component.css'
 })
 export class ModalNotificationComponent {
-  @Input() Title!: string;
-  @Input() Description!: string;
-  @Input() Modal: any;
-
+  Title = input.required<string>();
+  Description = input.required<string>();
+  
+  private modalService = inject(NgbModal);
+  @ViewChild('modal') modal?: TemplateRef<any>;
+  
+  openModal() {
+    this.modalService.open(this.modal, { centered: true })
+  }
 }

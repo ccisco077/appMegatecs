@@ -10,5 +10,5 @@ import { CardAddComponent } from "../../../components/card-add/card-add.componen
   styleUrl: './tienda.component.css'
 })
 export class TiendaComponent {
-
+  //
 }
